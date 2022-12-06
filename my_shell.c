@@ -122,6 +122,12 @@ void cd(char *tokens[], int tokenCount)
 		printf("Error: Too many arguments\n");
 		return;
 	}
+	
+	if(tokenCount <= 1)
+	{
+		printf("Error: Too few arguments\n");
+		return;
+	}
 
 	if (strcmp(tokens[1], "~") == 0)
 		strcpy(strcpy(tokens[1], "/home/") + 6, getlogin());
